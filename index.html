@@ -13,9 +13,9 @@
     </header>
     <main>
         <!-- main content container -->
-         <div class="flex border-4 border-red-800">
+         <div class="flex ">
             <!-- Shape cart container -->
-             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-4 border-green-800 overflow-auto gap-x-1 gap-y-6">
+             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-6">
                 <!-- Triangle card -->
                 <div class="card bg-base-100 w-56 shadow-xl ">
                     <figure>
@@ -88,7 +88,30 @@
                         <p class="text-2xl">Area : <span id="parallelogram-area"></span> <span>cm <sup>2</sup></span></p>
                       </div>
                       <div class="card-actions">
-                        <button class="btn btn-warning w-full">Calculate</button>
+                        <button onclick="parallogram()" class="btn btn-warning w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Rhombus card -->
+                <div class="card bg-base-100 w-56 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/rhombus.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p class="text-xl">Area(A)=0.5xd1xd2</p>
+                      <div class="flex">
+                        <!-- D1 Input -->
+                        <input id="d1Input" type="text" class="w-16 text-xl p-2 rounded-sm" placeholder="d1"><span class="mr-1">cm</span>
+                        <input id="d2Input" type="text" class="w-16 text-xl p-2 rounded-sm"  placeholder="d2"><span >cm</span>
+                      </div>
+                  <div>
+                    <p>Area : <span id="rhombus-area"> cm <sup>2</sup></span></p>
+                  </div>
+                      <div class="card-actions justify-end">
+                        <button onclick="rhombusArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -96,29 +119,14 @@
                 <div class="card bg-base-100 w-56 shadow-xl">
                     <figure>
                       <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        src="images/pentagon.png"
                         alt="Shoes" />
                     </figure>
                     <div class="card-body">
                       <h2 class="card-title">Shoes!</h2>
                       <p>If a dog chews shoes whose shoes does he choose?</p>
                       <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Triangle card -->
-                <div class="card bg-base-100 w-56 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button onclick="rhombusArea()" class="btn btn-primary">Buy Now</button>
                       </div>
                     </div>
                   </div>
@@ -132,5 +140,6 @@
     <script src="/scripts/triangle-calculate.js"></script>
     <script src="/scripts/rectangle-area.js"></script>
     <script src="/scripts/parallogram.js"></script>
+<script src="/scripts/rhombus.js"></script>
 </body>
 </html>
